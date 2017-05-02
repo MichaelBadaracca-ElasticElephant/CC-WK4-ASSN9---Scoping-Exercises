@@ -13,9 +13,11 @@
 			The following code does not correctly run (see tests)
 			How should we fix this?
 		*/
+		//Since char was not declared in the local scope of createCharacter, it was using the char declared (implicitly)
+		//in the global scope, yeilding erroneous results
 
 		function createCharacter(width, height, name) {
-			char = "(" + width + "x" + height + ") " + name;
+			var char = "(" + width + "x" + height + ") " + name;
 			return char;
 		}
 

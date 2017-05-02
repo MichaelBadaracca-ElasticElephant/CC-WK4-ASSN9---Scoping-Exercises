@@ -21,6 +21,9 @@
 			stack as it unrolls.
 		*/
 
+
+
+
 		function isEven(num) {
 			if (num === 0) {
 				return true;
@@ -32,6 +35,12 @@
 		}
 
 		isEven(8);
+
+		// LEGEND: 
+		//		  | = stack frame
+		//		--> = return
+		//|isEven(8), num = 8| --> |isEven(6) num = 6| --> |isEven(4) num = 4| --> |isEven(2) num = 2| --> |isEven(0), num =0| -->true |
+		//		true <--------------- true <------------------ true <------------------ true <---------------- true <----------------|	
 	</script>
 </body>
 </html>

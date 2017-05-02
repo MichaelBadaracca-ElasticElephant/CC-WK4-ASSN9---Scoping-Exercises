@@ -15,15 +15,22 @@
 			functionality of this code?
 		*/
 
-		function createFunction() {
-			var a = function () {
-				var a = "b";
-				return a;
+		//There are three different variables named a:
+		//	1) A function (now called innerFunction) in the outer function (now called outerFunction)
+		//	2) A variable in the innerFunction with the value "b" assigned to it
+		//	3) A variable in the global scope with the return value of the outerFunction assinged to it
+
+
+		function outerFunction() {
+			var innerFunction = function () {
+				var letterB = "b";
+				return letterB;
 			};
-			return a;
+			return innerFunction;
 		}
-		var a = createFunction();
-		console.log(a());
+		var giveMeAFunction = outerFunction();
+		debugger;
+		console.log(giveMeAFunction());
 	</script>
 </body>
 

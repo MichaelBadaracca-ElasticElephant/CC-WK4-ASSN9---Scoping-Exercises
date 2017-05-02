@@ -22,7 +22,30 @@
 		Next, write a function called countChar that behaves like countBs, except it takes a second argument that indicates the character that is to be counted (rather than counting only uppercase “B” characters). Rewrite countBs to make use of this new function.
 		 */
 
+		
+		function oldCountBs(inputString){
+			var numberOfBs = 0;
+			for(var charOfString = 0; charOfString < inputString.length; charOfString++){
+				if(inputString.charAt(charOfString) == "B"){
+					numberOfBs++;
+				}
+			}
+			return numberOfBs;
+		}
 
+		function countChar(inputString, charToCount){
+			var numberOfChar = 0;
+			for(var charOfString = 0; charOfString < inputString.length; charOfString++){
+				if(inputString.charAt(charOfString) == charToCount){
+					numberOfChar++;
+				}
+			}
+			return numberOfChar;
+		}
+
+		function coundBs(inputString){
+			return countChar(inputString,"B");
+		}
 
 		// Tests
 		console.log(countBs("Blah Blah Blah") === 3);
