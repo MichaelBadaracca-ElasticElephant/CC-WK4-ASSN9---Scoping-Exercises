@@ -25,6 +25,7 @@
 		
 		function oldCountBs(inputString){
 			var numberOfBs = 0;
+			//loops through each character of a string and looks for the letter B
 			for(var charOfString = 0; charOfString < inputString.length; charOfString++){
 				if(inputString.charAt(charOfString) == "B"){
 					numberOfBs++;
@@ -35,6 +36,7 @@
 
 		function countChar(inputString, charToCount){
 			var numberOfChar = 0;
+			//loops through each character of a string and looks for a specified character
 			for(var charOfString = 0; charOfString < inputString.length; charOfString++){
 				if(inputString.charAt(charOfString) == charToCount){
 					numberOfChar++;
@@ -43,7 +45,7 @@
 			return numberOfChar;
 		}
 
-		function coundBs(inputString){
+		function countBs(inputString){
 			return countChar(inputString,"B");
 		}
 
